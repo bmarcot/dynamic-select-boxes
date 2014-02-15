@@ -19,7 +19,6 @@ development:
   encoding: unicode
   database: dynboxes_development
   pool: 5
-  username: dynboxes
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -48,7 +47,6 @@ test:
   encoding: unicode
   database: dynboxes_test
   pool: 5
-  username: dynboxes
   password:
 
 production:
@@ -56,5 +54,4 @@ production:
   encoding: unicode
   database: dynboxes_production
   pool: 5
-  username: dynboxes
   password:
