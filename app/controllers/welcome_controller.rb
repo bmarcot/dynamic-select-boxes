@@ -2,7 +2,7 @@ class WelcomeController < ApplicationController
 
   def index
     @countries = Country.all
-    @cities = City.all
+    @cities = City.where("country_id = ?", Country.first.id)
   end
 
   def update_cities
