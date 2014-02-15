@@ -1,10 +1,9 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<p>Pick a destination:</p>
 
-<%= form_for :trip do |f| %>
-
-<%= f.select :country_id, options_for_select(@countries.collect { |country| [country.name.titleize, country.id] }, 1), {}, { id: 'countries_select' } %>
-
-<%= f.select :city_id, options_for_select(@cities.collect { |city| [city.name.titleize, city.id] }, 0), {}, { id: 'cities_select' } %>
-
-<% end %>
+<p>
+  <%= form_for :trip, url: {action: "show"}, html: {method: "get"} do |f| %>
+  <%= f.select :country_id, options_for_select(@countries.collect { |country| [country.name.titleize, country.id] }, 1), {}, { id: 'countries_select' } %>
+  <%= f.select :city_id, options_for_select(@cities.collect { |city| [city.name.titleize, city.id] }, 0), {}, { id: 'cities_select' } %>
+  <%= f.submit "Go!" %>
+  <% end %>
+</p>
