@@ -3,7 +3,7 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $ ->
-  $(document).on 'click', '#countries_select', (evt) ->
+  $(document).on 'change', '#countries_select', (evt) ->
     $.ajax 'update_cities',
       type: 'GET'
       dataType: 'script'
